@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rocket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skyView" translatesAutoresizingMaskIntoConstraints="NO" id="I2q-8d-lxp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moonGroundLayer" translatesAutoresizingMaskIntoConstraints="NO" id="TqC-2o-WnU">
+                                <rect key="frame" x="0.0" y="676" width="414" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="qH8-N2-utX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spaceShip" translatesAutoresizingMaskIntoConstraints="NO" id="wYP-gb-nbz">
+                                <rect key="frame" x="132" y="526" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EH6-p1-P1V"/>
+                                    <constraint firstAttribute="height" constant="150" id="ayA-n9-XTH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0p-ms-8mK">
+                                <rect key="frame" x="47" y="782" width="320" height="60"/>
+                                <color key="backgroundColor" red="0.80530465186268352" green="0.15967848106134985" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="EIj-h4-8I5"/>
+                                    <constraint firstAttribute="height" constant="60" id="Smx-fK-R8f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qJT-8P-VFT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TqC-2o-WnU" secondAttribute="bottom" id="4HS-Jk-EcQ"/>
+                            <constraint firstItem="TqC-2o-WnU" firstAttribute="top" secondItem="wYP-gb-nbz" secondAttribute="bottom" id="9PZ-f5-oxq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TqC-2o-WnU" secondAttribute="trailing" id="VWa-cV-wsA"/>
+                            <constraint firstItem="R0p-ms-8mK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z2g-8D-3cC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I2q-8d-lxp" secondAttribute="trailing" id="bBM-pH-okc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R0p-ms-8mK" secondAttribute="bottom" constant="20" id="dzR-WO-tTH"/>
+                            <constraint firstItem="TqC-2o-WnU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jl6-3h-Dt3"/>
+                            <constraint firstItem="I2q-8d-lxp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lHk-mN-hdP"/>
+                            <constraint firstAttribute="bottom" secondItem="I2q-8d-lxp" secondAttribute="bottom" id="mrV-sK-glQ"/>
+                            <constraint firstItem="wYP-gb-nbz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n5b-3E-uOB"/>
+                            <constraint firstItem="I2q-8d-lxp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nyO-S2-If2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="launchButtton" destination="R0p-ms-8mK" id="vbp-xc-bHC"/>
+                        <outlet property="spaceShipImage" destination="wYP-gb-nbz" id="QTe-OU-ELC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moonGroundLayer" width="373" height="138"/>
+        <image name="skyView" width="1024" height="1024"/>
+        <image name="spaceShip" width="200" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
