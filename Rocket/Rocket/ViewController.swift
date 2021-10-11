@@ -33,8 +33,10 @@ class ViewController: UIViewController {
         switch spaceShipTracker {
         case .launched:
             animateSpaceShip(yValue: .zero)
+            audioPlayer()
         case .readyForLaunch:
             animateSpaceShip(yValue: -UIScreen.main.bounds.height)
+            playRocket()
         }
     }
     
@@ -68,7 +70,20 @@ class ViewController: UIViewController {
         } catch let error {
             print(error)
         }
-        
+    }
+    
+    private func playRocket() {
+        if player != nil {
+            player?.stop()
+        }
+        guard let backgroundAudioTrack = Bundle.main.url(forResource: "rocketLaunch", withExtension: "wav") else { return }
+        do {
+            player = try AVAudioPlayer(contentsOf: backgroundAudioTrack)
+            player?.play()
+            player?.volume = 1
+        } catch let error {
+            print(error)
+        }
     }
 }
 
